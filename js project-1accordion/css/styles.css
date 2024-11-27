@@ -1,0 +1,98 @@
+#slide-one {
+    max-width: 350px;
+    background-color: aquamarine;
+    padding: 20px;
+    border-radius: 10px;
+    display: none;
+}
+
+.btn__slide {
+    background-color: bisque;
+    color: darkblue;
+    text-decoration: none;
+    border: 2px solid rgba(22, 4, 28, 1);
+    padding: 10px 40px;
+    border-radius: 20px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.btn__slide img {
+    max-width: 40px;
+    max-height: 25px;
+}
+
+.card__one {
+    display: none;
+}
+
+.card__two {
+    display: block;
+}
+
+.card__list ul {
+    display: none;
+}
+
+.button {
+    width: 50%;
+    height: 60px;
+}
+
+.active button {
+    background-color: pink;
+}
+
+
+/* .active {
+    display: block !important;
+} */
+
+.accordian-wrap {
+    max-width: 40%;
+    margin: 0 auto;
+    border: 1px solid rgba(22, 4, 28, 1);
+    border-radius: 10px;
+}
+
+.accordian__trigger {
+    background-color: beige;
+    margin: 20px 0;
+    padding: 10px 30px;
+    border: 1px solid black;
+    border-radius: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+}
+
+.accordian__content {
+    display: none;
+    background-color: rgb(136, 136, 131);
+    padding: 20px;
+}
+
+.accordian__trigger.active {
+    background-color: aqua;
+}
+
+.accordian__trigger::before {
+    content: "";
+    position: absolute;
+    border: 1px solid black;
+    width: 10px;
+    left: 10px;
+}
+
+.accordian__trigger::after {
+    content: "";
+    position: absolute;
+    border: 1px solid black;
+    height: 10px;
+    left: 15px;
+}
+
+.active.accordian__trigger::after {
+    display: none;
+}

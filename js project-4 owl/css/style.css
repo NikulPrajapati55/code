@@ -1,0 +1,18 @@
+    .wrap {
+        max-width: 1260px;
+        margin: 0 auto;
+    }
+    
+    .owl {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        max-width: 600px;
+        margin: auto;
+        overflow: hidden;
+    }
+    
+    .iteam {
+        background-color: rgb(15, 82, 82);
+        padding: 20px 20px;
+    }
