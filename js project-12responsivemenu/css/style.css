@@ -806,3 +806,30 @@ textarea.form-control {
         opacity: 1;
     }
 }
+
+
+/*togglemenu*/
+
+.menu {
+    position: relative;
+    &:hover .toggle__menu {
+        opacity: 1;
+    }
+}
+
+.toggle__menu {
+    display: block !important;
+    position: absolute;
+    top: 30px;
+    left: -20px;
+    background-color: whitesmoke;
+    width: 130px;
+    padding: 0;
+    opacity: 0;
+    li {
+        a {
+            display: block;
+            padding: 8px 15px;
+        }
+    }
+}
