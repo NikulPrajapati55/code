@@ -352,3 +352,38 @@
 
 
 }
+
+
+
+.sticky {
+    background-color: rgb(255 255 255);
+    box-shadow: 2px 4px 8px rgba(52, 58, 64, 0.15);
+    transition-property: all;
+    transition-timing-function: cubic-bezier(.4, 0, .2, 1);
+    transition-duration: 150ms;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 12;
+    animation: headerSticky .95s ease forwards;
+}
+
+@keyframes headerSticky {
+    0% {
+        -webkit-transform: translateY(-100%);
+        transform: translateY(-100%);
+    }
+    100% {
+        transform: translateY();
+    }
+}
+
+
+
+ $(window).scroll(function() {
+        if ($(this).scrollTop() > 100) {
+            $('header').addClass("sticky");
+        } else {
+            $('header').removeClass("sticky");
+        }
+    });
