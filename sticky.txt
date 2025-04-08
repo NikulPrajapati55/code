@@ -71,4 +71,25 @@ popup==css
     }
   });
 
+  <div class="container">
+    <a href="#" class="toggle-popup">test</a>
+    <div class="pop-up">Popup 1</div>
+  </div>
+
+  <div class="container">
+    <a href="#" class="toggle-popup">test</a>
+    <div class="pop-up">Popup 2</div>
+  </div>
+
+  <div class="container">
+    <a href="#" class="toggle-popup">test</a>
+    <div class="pop-up">Popup 3</div>
+  </div>
+
+  <div class="container">
+    <a href="#" class="toggle-popup">test</a>
+    <div class="pop-up">Popup 4</div>
+  </div>
+
+
 
