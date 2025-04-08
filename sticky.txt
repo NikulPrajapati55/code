@@ -47,6 +47,20 @@ popup==css
   }
   .pop-up.active {
     display: block;
+.pop-up {
+  position: relative;
+}
+
+.close-popup {
+  position: absolute;
+  top: 5px;
+  right: 10px;
+  background: none;
+  border: none;
+  font-size: 20px;
+  cursor: pointer;
+}
+
   }
 </style>
 
@@ -74,26 +88,42 @@ popup==css
         document.querySelectorAll(".pop-up").forEach(popup => popup.classList.remove("active"));
       }
     });
+
+    // Close on close button click
+    document.querySelectorAll(".close-popup").forEach(button => {
+      button.addEventListener("click", function () {
+        this.closest(".pop-up").classList.remove("active");
+      });
+    });
   });
 </script>
   <div class="container">
     <a href="#" class="toggle-popup">test</a>
-    <div class="pop-up">Popup 1</div>
+    <div class="pop-up">Popup 1
+  <button class="close-popup">×</button>
+
+</div>
   </div>
 
   <div class="container">
     <a href="#" class="toggle-popup">test</a>
-    <div class="pop-up">Popup 2</div>
+    <div class="pop-up">Popup
+  <button class="close-popup">×</button>
+ 2</div>
   </div>
 
   <div class="container">
     <a href="#" class="toggle-popup">test</a>
-    <div class="pop-up">Popup 3</div>
+    <div class="pop-up">Popup
+  <button class="close-popup">×</button>
+ 3</div>
   </div>
 
   <div class="container">
     <a href="#" class="toggle-popup">test</a>
-    <div class="pop-up">Popup 4</div>
+    <div class="pop-up">Popup
+  <button class="close-popup">×</button>
+ 4</div>
   </div>
 
 
