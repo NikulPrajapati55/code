@@ -37,40 +37,45 @@ js
 
 popup==css
 
-.pop-up {
-  display: none;
-  background: #f1f1f1;
-  padding: 10px;
-  margin-top: 5px;
-  border: 1px solid #ccc;
-}
-.pop-up.active {
-  display: block;
-}
-/**/
+<style>
+  .pop-up {
+    display: none;
+    background: #f1f1f1;
+    padding: 10px;
+    margin-top: 5px;
+    border: 1px solid #ccc;
+  }
+  .pop-up.active {
+    display: block;
+  }
+</style>
 
-  document.querySelectorAll('.toggle-popup').forEach(link => {
-    link.addEventListener('click', function(e) {
-      e.preventDefault();
+<!-- Script -->
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    document.querySelectorAll(".toggle-popup").forEach(link => {
+      link.addEventListener("click", function (e) {
+        e.preventDefault();
 
-      // Close all pop-ups
-      document.querySelectorAll('.pop-up').forEach(popup => popup.classList.remove('active'));
+        // Close all pop-ups
+        document.querySelectorAll(".pop-up").forEach(popup => popup.classList.remove("active"));
 
-      // Open the clicked one
-      const popup = this.nextElementSibling;
-      if (popup && popup.classList.contains('pop-up')) {
-        popup.classList.add('active');
+        // Open the clicked one
+        const popup = this.nextElementSibling;
+        if (popup && popup.classList.contains("pop-up")) {
+          popup.classList.add("active");
+        }
+      });
+    });
+
+    // Close on outside click
+    document.addEventListener("click", function (e) {
+      if (!e.target.closest(".container")) {
+        document.querySelectorAll(".pop-up").forEach(popup => popup.classList.remove("active"));
       }
     });
   });
-
-  // Optional: click outside to close
-  document.addEventListener('click', function(e) {
-    if (!e.target.closest('.container')) {
-      document.querySelectorAll('.pop-up').forEach(popup => popup.classList.remove('active'));
-    }
-  });
-
+</script>
   <div class="container">
     <a href="#" class="toggle-popup">test</a>
     <div class="pop-up">Popup 1</div>
